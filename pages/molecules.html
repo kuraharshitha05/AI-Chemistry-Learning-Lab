@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Molecules | AI Chemistry Learning Lab</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="container page-shell">
+    <header>
+      <div>
+        <h1>Chemistry Molecules</h1>
+        <p>Explore common chemistry molecules with names, formulas, details, and 3D structure views.</p>
+      </div>
+      <a class="button" href="../index.html">Back Home</a>
+    </header>
+
+    <div class="card molecule-viewer-card">
+      <div class="viewer-header">
+        <div>
+          <h2 id="molecule-name">Molecule Name</h2>
+          <p id="molecule-formula">Formula: —</p>
+          <p id="molecule-description">Select a molecule to see details and a 3D visualization.</p>
+        </div>
+        <div>
+          <label for="molecule-select">Choose a molecule</label>
+          <select id="molecule-select"></select>
+        </div>
+      </div>
+
+      <canvas id="molecule-canvas" width="760" height="420" aria-label="3D molecule viewer"></canvas>
+      <p class="viewer-note">Drag on the canvas to rotate the molecule.</p>
+    </div>
+
+    <div class="card">
+      <h2>Common Chemistry Molecules</h2>
+      <ul>
+        <li>Water (H<sub>2</sub>O)</li>
+        <li>Carbon Dioxide (CO<sub>2</sub>)</li>
+        <li>Methane (CH<sub>4</sub>)</li>
+        <li>Ammonia (NH<sub>3</sub>)</li>
+        <li>Sodium Chloride (NaCl)</li>
+        <li>Ethanol (C<sub>2</sub>H<sub>5</sub>OH)</li>
+        <li>Sulfuric Acid (H<sub>2</sub>SO<sub>4</sub>)</li>
+        <li>Acetic Acid (CH<sub>3</sub>COOH)</li>
+        <li>Benzene (C<sub>6</sub>H<sub>6</sub>)</li>
+      </ul>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>Molecule Details</h2>
+        <p>The viewer shows atomic positions, bonds, and a simple 3D projection. Rotate each molecule to study its shape.</p>
+      </div>
+      <div class="card">
+        <h2>How to Use</h2>
+        <p>Select a molecule from the menu above and drag the canvas to rotate the model. The labels update automatically for the selected molecule.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

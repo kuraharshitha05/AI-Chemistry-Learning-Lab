@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tutor | AI Chemistry Learning Lab</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="container page-shell">
+    <header>
+      <div>
+        <h1>AI Chemistry Tutor</h1>
+        <p>Ask questions and get instant chemistry explanations.</p>
+      </div>
+      <a class="button" href="../index.html">Back Home</a>
+    </header>
+
+    <div class="card">
+      <form id="tutor-form">
+        <label for="tutor-prompt">Ask the AI tutor a chemistry question:</label>
+        <textarea id="tutor-prompt" placeholder="e.g. What is a covalent bond?" required></textarea>
+        <button type="submit">Ask Tutor</button>
+      </form>
+      <div id="tutor-response" class="result">Your AI response will appear here.</div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

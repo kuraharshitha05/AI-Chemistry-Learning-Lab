@@ -1,0 +1,260 @@
+/* AI Chemistry Learning Lab Styles */
+:root {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --panel: #111a2f;
+  --panel-soft: #17243f;
+  --text: #e8eef8;
+  --muted: #90a0c4;
+  --accent: #4f9cff;
+  --accent-2: #53d7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, rgba(79, 156, 255, 0.18), transparent 25%),
+    linear-gradient(180deg, #0b1220 0%, #07111f 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: 0;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 1rem auto 2rem;
+  max-width: 720px;
+  line-height: 1.75;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #081425;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0 4rem;
+}
+
+.feature-grid article {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+}
+
+.feature-grid h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.25rem;
+}
+
+.feature-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+footer {
+  padding: 2rem 0 3rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.page-shell {
+  padding: 2rem 0 3rem;
+}
+
+.page-shell header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.page-shell header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.page-shell p {
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  margin-top: 1.5rem;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.table-full {
+  min-width: 700px;
+}
+
+.molecule-viewer-card {
+  padding: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.viewer-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.viewer-header label {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+#molecule-canvas {
+  width: 100%;
+  max-width: 100%;
+  height: 420px;
+  border-radius: 1.25rem;
+  background: radial-gradient(circle at top left, rgba(79, 156, 255, 0.14), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(83, 215, 255, 0.12), transparent 25%),
+    rgba(13, 18, 37, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.viewer-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.table-mini {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-mini th,
+.table-mini td {
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table-mini th {
+  background: rgba(255, 255, 255, 0.04);
+  text-align: left;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.95rem;
+  color: var(--text);
+  padding: 0.95rem 1rem;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 0.95rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #081425;
+  padding: 0.95rem 1.4rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+.result {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(79, 156, 255, 0.08);
+  border: 1px solid rgba(79, 156, 255, 0.18);
+  border-radius: 1rem;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 3rem;
+  }
+}
